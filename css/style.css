@@ -1,0 +1,266 @@
+/* @media only screen and (max-width: 1255px) {
+    .afterheader_img_part {
+        display: none;
+    }
+    .afterheader_logo {
+        width: 330px;
+        height: 90px;
+    }
+    .cycle {
+        height: 25px;
+        right: 68px;
+    }
+    .afterheader_text_part {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .section2 {
+        height: 1432px;
+    }
+    .photo2 {
+        margin-top: 30px;
+        width: 650px;
+        height: 425px;
+    }
+    .part_1_img_part {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 650px;
+    }
+} */
+@media only screen and (max-width: 1255px) {
+
+
+    .afterheader_img_part {
+        display: none;
+    }
+    .afterheader_logo {
+        width: 330px;
+        height: 90px;
+    }
+    .cycle {
+        height: 25px;
+        right: 68px;
+    }
+    .afterheader_text_part {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+    .nav_button {
+        display: block;
+    }
+    .header_button {
+        display: none;
+    }
+    .menu_list_item {
+        display: none;
+    }
+    .mobile_nav_active {
+        display: block;
+    }
+    .part_1_text_part {
+        display: block;
+    }
+    .section2 {
+        height: 1800px;
+    }
+    
+    .part_1_img_part {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 600px;
+        margin-left: 15px;
+    }
+    .p1_tp_title {
+        max-width: 200px;
+        margin-bottom: 15px;
+        height: 350px;
+        margin-left: 15px;
+    }
+    .p1_tp_list {
+        margin-left: 15px;
+    }
+    .p1_ip_p1_text {
+        display: none;
+    }
+    .photo1 {
+        width: 340px;
+        height: 282px;
+    }
+    .photo2 {
+        margin-top: 30px;
+        width: 340px;
+        height: 282px;
+    }
+    .p2_tp_title  {
+        margin-left: 15px;
+    }
+    .p2_tp_content {
+        width: 345px;
+        height: 97px;
+        margin-left: 15px;
+    }
+    .p2_text_part {
+        display: block;
+        
+    }
+
+    .section3 {
+        height: 1760px;
+    }
+    .p2_ip_part1 {
+        display: block;
+    }
+    .helmet {
+        width: 338px;
+        height: 269px;
+        margin-left: 15px;
+    }
+    .helmet_block {
+        width: 338px;
+        height: 269px;
+    }
+    .arrow1 {
+        right: 10px;
+    }
+    .helmet_title {
+        bottom: 30px; 
+    }
+    .helmet_price {
+        bottom: 0;
+    }
+    .bottle {
+        width: 338px;
+        height: 269px;
+        margin-left: 15px;
+        margin-top: 25px;
+    }
+    .bottle_block {
+        width: 338px;
+        height: 269px;
+    }
+    .arrow2 {
+        top: 57px;
+        right: 10px;
+    }
+    .water_bottle {
+        width: 100px;
+        bottom: 19px;
+    }
+    .water_bottle_price {
+        bottom: -23px;
+    }
+    .p2_ip_part2 {
+        display: block;
+    }
+    .bike_pump {
+        width: 338px;
+        height: 269px;
+        margin-left: 15px;
+    }
+    .bike_pump_block {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        width: 338px;
+        height: 269px;
+    }
+    .arrow3 {
+        top: 30px;
+        right: 10px;
+    }
+    .bike_pump_price {
+        bottom: 3px;
+    }
+    .pump {
+        bottom: 43px;
+    }
+    .repair_kit {
+        width: 338px;
+        height: 269px;
+        margin-left: 15px;
+    }
+    .repair_kit_block {
+        width: 338px;
+        height: 269px;
+    }
+    .arrow4 {
+        top: 30px;
+        right: 10px;
+    }
+    .kit_price {
+        bottom: 0;
+    }
+    .kit {
+        bottom: 29px;
+    }
+    .section4 {
+        height: 1878px;
+    }
+    .logos {
+        max-width: 150px;
+        display: block;
+        padding-top: 57px;
+        margin-bottom: 330px;
+    }
+    .tesla, .docu_sign, .maze, .uber, .miro, .discord {
+        margin-bottom: 25px;
+    }
+    .why_choose_lamere {
+        display: block;
+        height: 617px;
+    }
+    .front_side {
+        width: 338px;
+        height: 269px;
+        margin-left: 15px;
+    }
+    .fs_tp_title {
+        margin-left: 15px;
+    }
+    .fs_tp_content {
+        width: 320px;
+        margin-bottom: 25px;
+        margin-left: 15px;
+        height: 133px;
+    }
+    .btn_read_more {
+        margin-left: 10px;
+    }
+    .suggestions {
+        display: block;
+        height: 562px;
+        margin-left: 15px;
+    }
+    .sug {
+        margin-bottom: 50px;
+    }
+    .footer {
+        height: 900px;
+    }
+    .footer_content {
+        display: block;
+        max-width: 320px;
+        height: 700px;
+    }
+    .contacts {
+        margin-bottom: 50px;
+    }
+    .company_part {
+        margin-bottom: 50px;
+    }
+    .support_part {
+        margin-bottom: 50px;
+    }
+}

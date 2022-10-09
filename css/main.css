@@ -1,0 +1,934 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/poppins-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/poppins-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/poppins-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/poppins-v20-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
+  }
+  /* poppins-500 - latin */
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v20-latin-500.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/poppins-v20-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/poppins-v20-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/poppins-v20-latin-500.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/poppins-v20-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/poppins-v20-latin-500.svg#Poppins') format('svg'); /* Legacy iOS */
+  }
+  /* arbutus-slab-regular - latin */
+@font-face {
+    font-family: 'Arbutus Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/arbutus-slab-v16-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/arbutus-slab-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/arbutus-slab-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/arbutus-slab-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/arbutus-slab-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/arbutus-slab-v16-latin-regular.svg#ArbutusSlab') format('svg'); /* Legacy iOS */
+  }
+
+/* bellota-text-regular - latin */
+@font-face {
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/bellota-text-v16-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('../fonts/bellota-text-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/bellota-text-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/bellota-text-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/bellota-text-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/bellota-text-v16-latin-regular.svg#BellotaText') format('svg'); /* Legacy iOS */
+  }
+
+/*header start*/
+.header {
+    max-width: 100%;
+    height: 80px;
+    background: #1B1A1F;
+    border-bottom: 1px solid white;
+}
+.wrapper {
+    display: flex;
+    max-width: 100%;
+    height: 30px;
+    padding-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+}
+.header_logo {
+    max-width: 137px;
+    height: 22px;
+    margin-left: 50px;
+}
+.menu {
+    max-width: 225px;
+    display: flex;
+    color: white;
+}
+.mobile_nav {
+    position: absolute;
+    background-color: gray;
+    height: 901px;
+    width: 250px;
+    z-index: 6;
+    right: 0;
+    opacity: 0.9;
+    display: none;
+}
+.mobile_menu {
+    max-width: 107px;
+    display: block;
+    color: white;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.mobile_menu_list {
+    display: block;
+}
+.mobile_menu_list_item {
+    margin-bottom: 15px;
+}
+.mobile_menu_list_item:last-child {
+    margin-bottom: 30px;
+}
+.mobile_header_icons {
+    margin-right: auto;
+    margin-left: auto;
+    width: 120px;
+    height: 32px;
+    
+}
+.mobile_header_button {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.mobile_header_icon {
+    display: flex;
+    max-width: 110px;
+    height: 20px;
+    margin-right: 50px;
+}
+
+
+
+.menu_list {
+    display: flex;
+    justify-content: space-between;
+}
+.menu_list_item {
+    margin-right: 50px;
+}
+.menu_list_item:last-child {
+    margin-right: 0;
+}
+.header_link {
+    text-decoration: none;
+    color: white;
+}
+.header_link:hover {
+    color: rgb(172, 171, 171);
+}
+.header_button {
+    background-color: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.header_button:last-child {
+    margin-right: 0;
+}
+
+.nav_button{
+    position: relative;
+    z-index: 9;
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 25px;
+}
+.nav_button_icon {
+  
+    position: relative;
+    display: block;
+    width: 42px;
+    height: 5px;
+    border: none;
+    background-color: #fff;
+}
+.nav_button_icon::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 5px;
+    background-color: #fff;
+}
+.nav_button_icon::after {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: "";
+    display: block;
+    width: 42px;
+    height: 5px;
+    background-color: #fff;
+}
+
+
+.nav_button_close .nav_button_icon {
+    background-color: transparent;
+}
+.nav_button_close .nav_button_icon::before {
+    transform:rotate(45deg);
+    top: 0;
+}
+
+.nav_button_close .nav_button_icon::after {
+    transform:rotate(-45deg);
+    top: 0;
+}
+
+.header_icons {
+    display: flex;
+    max-width: 110px;
+    height: 20px;
+    margin-right: 50px;
+}
+/*header end*/
+
+/* afterheader start */
+.section1 {
+    background-color: #1B1A1F;
+    max-width: 100%;
+    height: 820px;
+}
+.afterheader {
+    max-width: 1600px;
+    height: 820px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.gray_recktangle {
+    position: absolute;
+    background-color: rgb(95, 95, 95);
+    width: 720px;
+    height: 585px;
+    margin-top: 105px;
+    right: 0;
+}
+.bike {
+    position: absolute;
+    right: 0;
+}
+.afterheader_text_part {
+    max-width: 515px;
+    margin-top: 107px;
+    position: relative;
+}
+.cycle {
+    position: absolute;
+    right: 25px;
+    top: 100px;
+}
+.text_content {
+    font-family: "Poppins";
+    font-style: normal;
+    max-width: 388px;
+    height: 100px;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 33px;
+    margin-top: 93px;
+    color: white;
+}
+.afterheader_button {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 33px;
+    background-color: #EB4C56;
+    color: #fff;
+    border: none;
+    width: 151px;
+    height: 57px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.afterheader_button:hover {
+    background-color: #aa252e;
+}
+.video {
+    position: absolute;
+    top: 415px;
+    left: 95px;
+}
+.ellipse {
+    position: absolute;
+    z-index: 1;
+    top: 461px;
+}
+.trykutnyk {
+    position: absolute;
+    z-index: 2;
+    top: 476px;
+    left: 167px;
+}
+.afterheader_social_medias {
+    position: relative;
+    display: block;
+    height: 120px;
+    max-width: 20px;
+    padding-top: 525px;
+}
+.s_m_icon {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+.s_m_icon:last-child {
+    margin-bottom: 0;
+}
+.afterheader_img_part {
+    display: block;
+    
+   
+}
+.gray_thin_rectangle {
+    position: absolute;
+    top: 710px;
+    right: 679px;
+}
+.gray_smaller_rectangle {
+    position: absolute;
+    top: 710px;
+    right: 650px;
+}
+.gray_the_smallest_rectangle {
+    position: absolute;
+    top: 710px;
+    right: 621px;
+}
+.table {
+    position: absolute;
+    top: 710px;
+    right: 0px;
+    width: 153px;
+    height: 72px;
+}
+.pyatykutnyk {
+    margin-right: 11px;
+    margin-bottom: 18px;
+}
+.pyatykutnyk:last-child {
+    margin-right: 0;
+}
+/* afterheader end */
+
+
+/* content start */
+.section2 {
+    background-color: #E5E5E5;
+    max-width: 100%;
+    height: 1200px;
+}
+.part_1 {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 1200px;
+}
+.part_1_text_part {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+.p1_tp_title {
+    font-family: 'Arbutus Slab';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 140%;
+    width: 527px;
+    height: 180px;
+    padding-top: 109px;
+    margin-bottom: 100px;
+}
+.p1_tp_list {
+    display: block;
+    padding-top: 109px;
+}
+.p1_tp_list_title {
+    position: relative;
+    margin-bottom: 20px;
+    font-family: 'Arbutus Slab';
+    width: 114px;
+    height: 39px;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 140%;
+}
+.p1_tp_list_title:before {
+    content: "";    
+    display: block;
+    width: 120px;
+    height: 4px;
+    left: 0;
+    top: 100%;
+    background-color: #EB4C56;
+    position: absolute;
+    
+}
+
+.p1_tp_list_elements {
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    width: 123px;
+    height: 25px;
+}
+.p1_tp_list_elements:last-child {
+    padding-bottom: 0;
+}
+.part_1_img_part {
+    justify-content: space-between;
+    display: flex;
+
+}
+.p1_ip_photo1 {
+    display: block;
+}
+.p1_ip_p1_text {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    max-width: 650px;
+    
+}
+.photo1 {
+    width: 650px;
+    height: 425px;
+}
+.prev {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: black;
+    left: 0;
+}
+.one_four {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: black;
+    left: 305px;
+}
+.one_four::before {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 51px;
+}
+.one_four::after {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 51px;
+}
+.next {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    color: black;
+    right: 0;
+}
+.photo2 {
+    width: 800px;
+    height: 650px;
+}
+
+/* prices start */
+.section3 {
+    max-width: 100%;
+    height: 1700px;
+    background-color: #fff;
+}
+.part2 {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+}
+.p2_text_part {
+    margin-top: 86px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+.p2_tp_title {
+    font-family: 'Arbutus Slab';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 150%;
+    width: 357px;
+    height: 231px;
+}
+.p2_tp_content {
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+    color: #2F2E30;
+    width: 477px;
+    height: 185px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.p2_img_part {
+    display: block;
+    margin-bottom: 65px;
+}
+.p2_ip_part1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    
+}
+.p2_ip_part2 {
+    display: flex;
+    justify-content: right;
+    
+}
+.helmet_block {
+    position: relative;
+    margin-right: 51px;
+    width: 700px;
+    height: 440px;
+}
+.helmet {
+    width: 700px;
+    height: 440px;
+}
+.bottle_block {
+    position: relative;
+    width: 750px;
+    height: 700px;
+}
+.bottle {
+    width: 750px;
+    height: 700px;
+}
+.bike_pump_block {
+    position: relative;
+    margin-right: 51px;
+    width: 600px;
+    height: 437px;
+}
+.bike_pump {
+    width: 600px;
+    height: 437px;
+}
+.repair_kit_block {
+    position: relative;
+    width: 600px;
+    height: 437px;
+}
+.repair_kit {
+    width: 600px;
+    height: 437px;
+}
+.arrow1 {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.arrow2 {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.arrow3 {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.arrow4 {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+.helmet_title {
+    position: absolute;
+    bottom: 72px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+.helmet_price {
+    position: absolute;
+    bottom: 28px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+}
+.water_bottle {
+    position: absolute;
+    bottom: 66px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+.water_bottle_price {
+    position: absolute;
+    bottom: 26px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+}
+.pump {
+    position: absolute;
+    bottom: 66px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+.bike_pump_price {
+    position: absolute;
+    bottom: 26px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+}
+.kit {
+    position: absolute;
+    bottom: 66px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+.kit_price {
+    position: absolute;
+    bottom: 26px;
+    left: 35px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+}
+
+.explore_all {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 53px;
+    background-color: #fff;
+    border: 1px solid black;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 33px;
+    cursor: pointer;
+}
+.explore_all:hover {
+    background-color: #E5E5E5;
+}
+/* prices end */
+
+
+
+/* why lamere start */
+.section4 {
+    background-color: #E5E5E5;
+    max-width: 100%;
+    height: 1000px;
+}
+.logos {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 115px;
+    margin-bottom: 117px;
+}
+.why_choose_lamere {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 92px;
+}
+
+.fs_tp_title {
+    font-family: 'Arbutus Slab';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 160%;
+    margin-bottom: 20px;
+}
+.fs_tp_content {
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 33px;
+    color: #2F2E30;
+    width: 499px;
+    height: 99px;
+    margin-bottom: 16px;
+}
+.btn_read_more {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+}
+.btn_read_more:hover, .btn_read_more:focus, .btn_read_more:active  {
+    color: purple;
+}
+
+.suggestions {
+    display: flex;
+    justify-content: space-between;
+    height: 160px;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.sug_title {
+    font-family: 'Arbutus Slab';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 160%;
+    margin-bottom: 24px;
+}
+.sug_content {
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 33px;
+    width: 337px;
+    height: 120px;
+}
+/* why lamere end */
+
+/* content end */
+
+
+/* footer start */
+.footer {
+    max-width: 100%;
+    height: 453px;
+    background-color: #1B1A1F;
+}
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 237px;
+    padding-top: 100px;
+}
+.contacts_title {
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 26px;
+}
+.contacts {
+    position: relative;
+}
+.contacts_input {
+    
+    outline: none;
+    width: 300px;
+    height: 40px;
+    opacity: 0.2;
+}
+.submit_icon {
+    position: absolute;
+    left: 280px;
+    top: 69px;
+    cursor: pointer;
+}
+/* .contacts_submit {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+} */
+.contacts_social_medias {
+    margin-top: 46px;
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
+    height: 32px;
+}
+.cp_list_title {
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 24px;
+}
+.cp_list_item {
+    font-family: 'Bellota Text';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+.cp_list_item:last-child {
+    margin-bottom: 0;
+}
+/* footer end */
